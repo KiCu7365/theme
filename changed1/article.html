@@ -11,28 +11,29 @@
     <title>{{ &articleSingle.title }} - {{ &OPT.siteName }}</title>
     <meta name="keywords" content="{{ &articleSingle.category }},{{ &articleSingle.tags }}" />
     <meta name="description" content="{{ &OPT.siteDescription }}" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.3.2/styles/tomorrow-night-bright.min.css">
+    <script src='https://cdn.staticfile.org/highlight.js/10.3.2/highlight.min.js'></script>
     {{ &OPT.codeBeforHead }}
 </head>
 
 <body>
 
     <mdui-layout>
-        <mdui-top-app-bar>
+        <mdui-layout-item>
             <mdui-top-app-bar-title>
-                <a href="/" title="{{ &OPT.siteName }}" rel="home">{{ &OPT.siteName }}</a>
-                <!--<p style="font-size:14px;">{{ &OPT.siteDescription }}</p>-->
-
+                <mdui-button href="/" title="{{ &OPT.siteName }}" style="margin: 7px;">{{ &OPT.siteName }}</mdui-button>
+                <mdui-divider></mdui-divider>
+                <h5> </h5>
             </mdui-top-app-bar-title>
 
-        </mdui-top-app-bar>
+        </mdui-layout-item>
 
         <mdui-layout-main style="min-height: 300px">
-            <h1> </h1>
-            <mdui-divider></mdui-divider>
-            <h1> </h1>
+
+
             <div style="text-align: center;width: 100%;">
                 <mdui-card style="width: 98%;">
-                    <mdui-card style="text-align: center;width: 95%;margin: 5px;">
+                    <div style="text-align: center;width: 95%;margin: 5px;">
                         <div style="text-align: left;">
                             <article id="post-{{ &articleSingle.id }}"
                                 class="post-{{ &articleSingle.id }} post type-post status-publish format-standard hentry category-4">
@@ -78,7 +79,7 @@
                                 <!-- .entry-meta -->
                             </article>
                         </div>
-                    </mdui-card>
+                    </div>
 
 
 
